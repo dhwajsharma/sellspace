@@ -1,0 +1,48 @@
+{
+  "name": "atom-redux",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^4.12.2",
+    "@material-ui/icons": "^4.11.2",
+    "@reduxjs/toolkit": "^1.6.1",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "ajax": "0.0.4",
+    "autodesk.forge.designautomation": "^3.0.3",
+    "axios": "^0.21.1",
+    "firebase": "^8.8.0",
+    "forge-apis": "^0.8.6",
+    "jquery": "^3.6.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-forge-viewer": "^0.3.3",
+    "react-redux": "^7.2.4",
+    "react-router-dom": "^5.2.0",
+    "react-script-tag": "^1.1.2",
+    "react-scripts": "4.0.3",
+    "three": "^0.130.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

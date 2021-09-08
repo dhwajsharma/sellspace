@@ -1,0 +1,19 @@
+.header {
+  color: white;
+  display: flex;
+  height: 72px;
+  align-items: center;
+  background: #1d2020;
+  margin: 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.76);
+  justify-content: space-between;
+  z-index: 99;
+}
+
+.header__left {
+  margin-left: 20px;
+}
+
+.header__right {
+  margin-right: 20px;
+}
