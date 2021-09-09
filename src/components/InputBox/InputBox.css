@@ -1,0 +1,57 @@
+.inputBox {
+  display: flex;
+  flex-direction: column;
+  padding-top: 40px;
+}
+
+.inputBox__searchBar {
+  display: flex;
+  justify-content: center;
+}
+
+.inputBox__searchBar > input {
+  border-radius: 10px;
+  margin-right: 2px;
+  overflow: hidden;
+  outline: none;
+  width: 30%;
+}
+
+.inputBox__photo {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+  flex-grow: inherit;
+  padding: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 10%;
+  margin-left: 520px;
+  margin-top: 10px;
+}
+
+.inputBox__photo:hover {
+  background-color: gray;
+}
+
+.inputBox__searchBar__removeImage {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+.inputBox__searchBar__removeImage:hover {
+  brightness: 0.5;
+  cursor: pointer;
+}
+
+.inputBox__searchBar__removeImage > img {
+  height: 30px;
+  object-fit: contain;
+}
+
+.inputBox__searchBar__removeImage > p {
+  font-size: 15px;
+  color: rgb(165, 17, 17);
+  text-align: center;
+}
