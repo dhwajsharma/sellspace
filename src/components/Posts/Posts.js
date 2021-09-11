@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+import { useState } from "react";
 import { useCollection } from "react-firebase-hooks/firestore";
 import { db } from "../../firebase";
 import Post from "../Post/Post";
@@ -7,6 +9,19 @@ const Posts = () => {
     const [realtimePosts] = useCollection(
         db.collection("posts").orderBy("timestamp", "desc")
     )
+    const [posts, setPosts] = useState([]);
+
+    useEffect(() => {
+        db.collection("posts").orderBy("timestamp", "desc").onSnapshot((snapshot) =>
+            setPosts(
+                snapshot.docs.map((doc) => ({
+                    id: doc.id,
+                    data: doc.data(),
+                }))
+            )
+        );
+    }, []);
+
 
     return (
         <div className="posts">
