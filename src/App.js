@@ -32,7 +32,10 @@ function App() {
 
     <Router>
       {!user ? (
-        <Header />
+        <div className="app">
+          <Header />
+          <Home />
+        </div>
       ) : (
         <div className="app">
           <Header />

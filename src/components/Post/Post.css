@@ -1,0 +1,72 @@
+.post {
+  display: grid;
+  gap: 40px;
+  grid-template-columns: repeat(3, 1fr);
+  background: #1d2020;
+}
+
+.post__tile {
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  color: white;
+  padding: 30px;
+  transition: transform 0.2s ease;
+}
+
+.post__tile:hover {
+  transform: scale(1.05);
+}
+
+.post__text {
+  padding: 5px;
+  margin-top: 5px;
+  border: 2px;
+}
+
+.post__nameTimestamp {
+  display: flex;
+  align-items: center;
+  --tw-space-x-reverse: 0;
+  margin-right: calc(0.5rem * var(--tw-space-x-reverse));
+  margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.post__nameTimestamp__name {
+  font-size: 1rem;
+}
+
+.post__nameTimestamp__timestamp {
+  font-size: 0.8rem;
+  margin-left: 10px;
+  color: #aaa;
+}
+
+.post__text__message {
+  height: 105px;
+  flex-grow: 1;
+  overflow: hidden;
+  font-size: 18px;
+  color: #96939b;
+}
+
+.post__image img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 930px) {
+  .post {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .post {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

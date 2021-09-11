@@ -15,8 +15,6 @@ const InputBox = () => {
     const user = useSelector(selectUser);
     const dispatch = useDispatch();
 
-
-
     const sendPost = (e) => {
         e.preventDefault();
         if (!inputRef.current.value) return;
@@ -61,7 +59,14 @@ const InputBox = () => {
     return (
         <div className="inputBox">
             <div className="inputBox__searchBar">
-                <input ref={inputRef} type="text" placeholder="" />
+                {
+                    !user ? (
+                        <input ref={inputRef} type="text" placeholder="" disabled />
+
+                    ) : (
+                        <input ref={inputRef} type="text" placeholder="" />
+                    )
+                }
                 <Button variant="contained" color="primary" onClick={sendPost} >Submit</Button>
 
                 {imageToPost && (
