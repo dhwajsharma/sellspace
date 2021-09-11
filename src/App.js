@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import Header from './components/Header/Header';
 import {
@@ -9,7 +9,7 @@ import {
 } from "react-router-dom";
 import { useDispatch, useSelector } from 'react-redux';
 import { login, selectUser } from './features/userSlice';
-import { auth } from './firebase';
+import { auth, db } from './firebase';
 import Home from './components/Home/Home';
 
 function App() {

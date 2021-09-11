@@ -15,15 +15,16 @@ const InputBox = () => {
     const user = useSelector(selectUser);
     const dispatch = useDispatch();
 
+
+
     const sendPost = (e) => {
         e.preventDefault();
         if (!inputRef.current.value) return;
 
         db.collection("posts").add({
             message: inputRef.current.value,
-            name: user.name,
+            name: user.displayName,
             email: user.email,
-            image: user.image,
             timestamp: firebase.firestore.FieldValue.serverTimestamp()
         }).then(doc => {
             if (imageToPost) {
