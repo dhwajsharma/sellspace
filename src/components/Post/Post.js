@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { selectUser } from "../../features/userSlice";
 import "./Post.css"
 
-const Post = ({ key, name, message, email, timestamp, postImage }) => {
+const Post = ({ name, message, email, timestamp, postImage }) => {
     const user = useSelector(selectUser);
     const dispatch = useDispatch();
 
