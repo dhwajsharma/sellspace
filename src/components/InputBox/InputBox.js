@@ -64,7 +64,7 @@ const InputBox = () => {
                         <input ref={inputRef} type="text" placeholder="" disabled />
 
                     ) : (
-                        <input ref={inputRef} type="text" placeholder="" />
+                        <input ref={inputRef} type="text" placeholder="Post..." />
                     )
                 }
                 <Button variant="contained" color="primary" onClick={sendPost} >Submit</Button>

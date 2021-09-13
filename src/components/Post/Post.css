@@ -1,12 +1,9 @@
 .post {
-  display: grid;
-  gap: 40px;
-  grid-template-columns: repeat(3, 1fr);
   background: #1d2020;
+  border-radius: 20px;
 }
 
 .post__tile {
-  border-radius: 10px;
   cursor: pointer;
   display: flex;
   flex-direction: column;

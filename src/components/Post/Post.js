@@ -5,7 +5,6 @@ import "./Post.css"
 const Post = ({ key, name, message, email, timestamp, postImage }) => {
     const user = useSelector(selectUser);
     const dispatch = useDispatch();
-    console.log(user)
 
     return (
         <div className="post">
