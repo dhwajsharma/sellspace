@@ -10,7 +10,7 @@ const Home = () => {
     return (
         <div className="home">
             <InputBox />
-            <Posts/>
+            <Posts />
         </div>
     )
 }

@@ -11,10 +11,12 @@ import { useDispatch, useSelector } from 'react-redux';
 import { login, selectUser } from './features/userSlice';
 import { auth, db } from './firebase';
 import Home from './components/Home/Home';
+import OpenPost from './components/OpenPost/OpenPost';
 
 function App() {
   const user = useSelector(selectUser);
   const dispatch = useDispatch();
+  const [posts, setPosts] = useState([]);
 
   useEffect(() => {
     auth.onAuthStateChanged(user => {
@@ -28,21 +30,39 @@ function App() {
     })
   }, [dispatch])
 
+  useEffect(() => {
+    db.collection("posts").orderBy("timestamp", "desc").onSnapshot((snapshot) =>
+      setPosts(
+        snapshot.docs.map((doc) => ({
+          id: doc.id,
+          data: doc.data(),
+          timestamp: null
+        }))
+      )
+    );
+  }, []);
+
+
   return (
 
     <Router>
       {!user ? (
         <div className="app">
           <Header />
-          <Home />
+          <Home posts={posts} />
         </div>
       ) : (
         <div className="app">
           <Header />
           <div className="app__body">
-            <Route path="/" exact>
-              <Home />
-            </Route>
+            <Switch>
+              <Route path="/openpost">
+                <OpenPost />
+              </Route>
+              <Route path="/" exact>
+                <Home />
+              </Route>
+            </Switch>
           </div>
         </div>
       )}
