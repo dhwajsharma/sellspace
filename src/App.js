@@ -5,7 +5,6 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
 } from "react-router-dom";
 import { useDispatch, useSelector } from 'react-redux';
 import { login, selectUser } from './features/userSlice';
@@ -41,7 +40,6 @@ function App() {
       )
     );
   }, []);
-
 
   return (
 

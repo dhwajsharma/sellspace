@@ -4,10 +4,12 @@ import "./Header.css"
 import { useDispatch, useSelector } from 'react-redux'
 import { auth, provider } from '../../firebase'
 import { login, logout, selectUser } from '../../features/userSlice';
+import { useHistory } from 'react-router'
 
 const Header = () => {
     const user = useSelector(selectUser);
     const dispatch = useDispatch();
+    const history = useHistory();
 
     const signIn = () => {
         auth.signInWithPopup(provider)
@@ -29,9 +31,9 @@ const Header = () => {
 
     return (
         <div className="header">
-            <div className="header__left">
-                <h2>MUJ MARKETPLACE</h2>
-            </div>
+            <div className="header__left" onClick={() => history.push("/")} >
+                <h2> MUJ MARKETPLACE</h2>
+            </div >
             <div className="header__right">
                 {!user ? (
                     <Button variant="contained" color="primary" onClick={signIn}>Login</Button>
@@ -40,7 +42,7 @@ const Header = () => {
                 )
                 }
             </div>
-        </div>
+        </div >
     )
 }
 

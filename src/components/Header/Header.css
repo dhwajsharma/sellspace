@@ -12,6 +12,7 @@
 
 .header__left {
   margin-left: 20px;
+  cursor: pointer;
 }
 
 .header__right {
