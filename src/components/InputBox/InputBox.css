@@ -6,19 +6,27 @@
 
 .inputBox__searchBar {
   display: flex;
+  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 0 25px;
+  align-items: center;
   justify-content: center;
 }
 
-.inputBox__searchBar > input {
-  border-radius: 10px;
-  box-shadow: 0 1px 2px rgba(226, 226, 226, 0.1);
-  background-color: #1d2020;
-  color: white;
-  border: none;
-  margin-right: 10px;
-  overflow: hidden;
+.inputBox__inputContainer {
+  display: flex;
+  align-items: center;
+}
+
+.inputBox__inputContainer > input {
+  flex-grow: 1;
+  background-color: transparent;
   outline: none;
-  width: 30%;
+  border: none;
+  color: white;
+  font-size: 20px;
+  margin-left: 20px;
 }
 
 .inputBox__photo {
@@ -29,10 +37,8 @@
   padding: 20px;
   border-radius: 10px;
   cursor: pointer;
-  width: 10%;
-  margin-left: 520px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  width: 50%;
+  margin: 0 auto;
 }
 
 .inputBox__photo:hover {

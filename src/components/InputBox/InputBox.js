@@ -59,14 +59,17 @@ const InputBox = () => {
     return (
         <div className="inputBox">
             <div className="inputBox__searchBar">
-                {
-                    !user ? (
-                        <input ref={inputRef} type="text" placeholder="" disabled />
+                <div className="inputBox__inputContainer">
+                    {
+                        !user ? (
+                            <input ref={inputRef} type="text" placeholder="" disabled />
 
-                    ) : (
-                        <input ref={inputRef} type="text" placeholder="Post..." />
-                    )
-                }
+                        ) : (
+                            <input ref={inputRef} type="text" placeholder="Post..." />
+                        )
+                    }
+                </div>
+
                 <Button variant="contained" color="primary" onClick={sendPost} >Submit</Button>
 
                 {imageToPost && (
@@ -75,7 +78,6 @@ const InputBox = () => {
                         <p >Remove</p>
                     </div>
                 )}
-
             </div>
             <div onClick={() => filePickerRef.current.click()} className="inputBox__photo">
                 <CameraAlt />
