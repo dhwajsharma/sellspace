@@ -32,7 +32,7 @@ const Header = () => {
     return (
         <div className="header">
             <div className="header__left" onClick={() => history.push("/")} >
-                <h2> MUJ MARKETPLACE</h2>
+                <h2>MARKETPLACE</h2>
             </div >
             <div className="header__right">
                 {!user ? (
