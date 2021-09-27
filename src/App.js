@@ -11,6 +11,7 @@ import { login, selectUser } from './features/userSlice';
 import { auth, db } from './firebase';
 import Home from './components/Home/Home';
 import OpenPost from './components/OpenPost/OpenPost';
+import Team from './components/Team/Team';
 
 function App() {
   const user = useSelector(selectUser);
@@ -56,6 +57,9 @@ function App() {
             <Switch>
               <Route path="/openpost">
                 <OpenPost />
+              </Route>
+              <Route path="/team">
+                <Team />
               </Route>
               <Route path="/" exact>
                 <Home />

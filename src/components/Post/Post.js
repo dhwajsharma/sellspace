@@ -32,16 +32,15 @@ const Post = ({ name, title, price, description, email, timestamp, postImage }) 
 
                     ) : <p className="post__nameTimestamp__timestamp">Loading</p>}
                 </div>
+                {postImage && (
+                    <div className="post__image">
+                        <img src={postImage} alt="" />
+                    </div>
+                )}
                 <p className="post__text__message">{title}</p>
-                <p className="post__text__message">{price}</p>
-                <p className="post__text__message">{description}</p>
-
+                <p className="post__text__message">{"₹ "}{price}</p>
             </div>
-            {postImage && (
-                <div className="post__image">
-                    <img src={postImage} alt="" />
-                </div>
-            )}
+
         </div>
     )
 }

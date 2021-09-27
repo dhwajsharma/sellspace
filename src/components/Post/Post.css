@@ -48,12 +48,11 @@
 }
 
 .post__text__message {
-  height: 105px;
+  /* height: 105px; */
   flex-grow: 1;
   overflow: hidden;
   font-size: 18px;
   color: #96939b;
-  text-overflow: ellipsis;
 }
 
 .post__image img {

@@ -104,7 +104,7 @@ const InputBox = () => {
                 <Button variant="contained" onClick={handleClickOpen}>
                     Add Post
                 </Button>
-                <Dialog open={open} onClose={handleClose}>
+                <Dialog className="inputBox__dialog" open={open} onClose={handleClose}>
 
                     <DialogTitle>Enter Details</DialogTitle>
 
@@ -124,8 +124,8 @@ const InputBox = () => {
                             autoFocus
                             margin="dense"
                             id="name"
-                            label="Price"
-                            type="text"
+                            label="Price (₹)"
+                            type="number"
                             fullWidth
                             variant="standard"
                         />

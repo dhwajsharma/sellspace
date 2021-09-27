@@ -5,11 +5,26 @@ import { useDispatch, useSelector } from 'react-redux'
 import { auth, provider } from '../../firebase'
 import { login, logout, selectUser } from '../../features/userSlice';
 import { useHistory } from 'react-router'
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+
 
 const Header = () => {
     const user = useSelector(selectUser);
     const dispatch = useDispatch();
     const history = useHistory();
+    const [anchorEl, setAnchorEl] = React.useState(null);
+    const open = Boolean(anchorEl);
+    const handleClick = (event) => {
+        setAnchorEl(event.currentTarget);
+    };
+    const handleClose = () => {
+        setAnchorEl(null);
+    };
+
+    const handleTeamClick = () => {
+        history.push("/team");
+    }
 
     const signIn = () => {
         auth.signInWithPopup(provider)
@@ -34,13 +49,44 @@ const Header = () => {
             <div className="header__left" onClick={() => history.push("/")} >
                 <h2>MARKETPLACE</h2>
             </div >
+
             <div className="header__right">
-                {!user ? (
-                    <Button variant="contained" color="primary" onClick={signIn}>Login</Button>
-                ) : (
-                    <Button variant="contained" color="primary" onClick={signOut}>Logout</Button>
-                )
-                }
+                <Button
+                    id="basic-button"
+                    aria-controls="basic-menu"
+                    aria-haspopup="true"
+                    aria-expanded={open ? 'true' : undefined}
+                    onClick={handleClick}
+                    variant="contained"
+                    color="primary"
+                >
+                    Dashboard
+                </Button>
+                <Menu
+                    id="basic-menu"
+                    anchorEl={anchorEl}
+                    open={open}
+                    onClose={handleClose}
+                    MenuListProps={{
+                        'aria-labelledby': 'basic-button',
+                    }}
+                >
+                    <MenuItem onClick={handleClose}>Profile</MenuItem>
+                    <MenuItem onClick={handleClose}>My account</MenuItem>
+                    <MenuItem onClick={handleTeamClick}>Team</MenuItem>
+
+                    {!user ? (
+                        // <Button variant="contained" color="primary" onClick={signIn}>Login</Button>
+                        <MenuItem onClick={signIn}>Login</MenuItem>
+
+                    ) : (
+                        // <Button variant="contained" color="primary" onClick={signOut}>Logout</Button>
+                        <MenuItem onClick={signOut}>Logout</MenuItem>
+
+                    )
+                    }
+                </Menu>
+
             </div>
         </div >
     )

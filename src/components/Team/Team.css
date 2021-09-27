@@ -1,0 +1,7 @@
+.team {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #262a2b;
+  color: white;
+}

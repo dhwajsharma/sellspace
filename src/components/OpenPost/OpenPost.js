@@ -19,7 +19,10 @@ const OpenPost = () => {
                     <p>{selectedPost?.email}</p>
                 </div>
                 <div className="openpost__message">
-                    <p>{selectedPost?.message}</p>
+                    <p>{selectedPost?.title}</p>
+                    <p>{selectedPost?.price}</p>
+                    <p>{selectedPost?.description}</p>
+
                 </div>
             </div>
         </div>
