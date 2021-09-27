@@ -1,7 +1,80 @@
 .team {
+  display: grid;
+  gap: 40px;
+  grid-template-columns: repeat(3, 1fr);
+  background: #262a2b;
+  height: 100vh;
+  padding-left: 2px;
+  padding-right: 2px;
+  color: white;
+}
+
+.team__container {
+  background: #1d2020;
+  border-radius: 20px;
+  cursor: pointer;
+  position: relative;
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  background-color: #262a2b;
+  justify-content: center;
+  align-items: center;
   color: white;
+  text-align: center;
+  margin: 10px;
+  z-index: 30;
+  transition: transform 0.2s ease;
+}
+
+.team__name {
+  padding: 5px;
+  margin-top: 5px;
+  border: 2px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.team__title {
+  padding: 5px;
+  margin-top: 5px;
+  border: 2px;
+  color: gray;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.team__image img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.team__links .MuiButton-root {
+  margin: 5px;
+}
+
+@media screen and (max-width: 930px) {
+  .team {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .team {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media screen and (max-width: 930px) {
+  .team__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .team__container {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
