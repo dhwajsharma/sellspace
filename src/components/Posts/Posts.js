@@ -32,7 +32,9 @@ const Posts = () => {
                         <Post
                             key={post.id}
                             name={post.data().name}
-                            message={post.data().message}
+                            title={post.data().title}
+                            price={post.data().price}
+                            description={post.data().description}
                             email={post.data().email}
                             timestamp={post.data().timestamp}
                             postImage={post.data().postImage}
@@ -42,7 +44,9 @@ const Posts = () => {
                         <Post
                             key={post.id}
                             name={post.name}
-                            message={post.message}
+                            title={post.data().title}
+                            price={post.data().price}
+                            description={post.data().description}
                             email={post.email}
                             timestamp={post.timestamp}
                             postImage={post.postImage}

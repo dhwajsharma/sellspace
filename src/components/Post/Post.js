@@ -4,7 +4,7 @@ import { useHistory } from 'react-router';
 import "./Post.css"
 import { selectPost } from "../../features/postSlice";
 
-const Post = ({ name, message, email, timestamp, postImage }) => {
+const Post = ({ name, title, price, description, email, timestamp, postImage }) => {
     const user = useSelector(selectUser);
     const dispatch = useDispatch();
     const history = useHistory();
@@ -12,7 +12,9 @@ const Post = ({ name, message, email, timestamp, postImage }) => {
     const openPost = () => {
         dispatch(selectPost({
             name,
-            message,
+            title,
+            price,
+            description,
             email,
             timestamp,
             postImage
@@ -30,7 +32,10 @@ const Post = ({ name, message, email, timestamp, postImage }) => {
 
                     ) : <p className="post__nameTimestamp__timestamp">Loading</p>}
                 </div>
-                <p className="post__text__message">{message}</p>
+                <p className="post__text__message">{title}</p>
+                <p className="post__text__message">{price}</p>
+                <p className="post__text__message">{description}</p>
+
             </div>
             {postImage && (
                 <div className="post__image">
