@@ -19,6 +19,7 @@ const InputBox = () => {
     const title = useRef(null);
     const price = useRef(null);
     const description = useRef(null);
+    const number = useRef(null);
     const filePickerRef = useRef(null);
     const [imageToPost, setImageToPost] = useState(null);
     const user = useSelector(selectUser);
@@ -38,11 +39,14 @@ const InputBox = () => {
         if (!title.current.value) return;
         if (!price.current.value) return;
         if (!description.current.value) return;
+        if (!number.current.value) return;
+
 
         db.collection("posts").add({
             title: title.current.value,
             price: price.current.value,
             description: description.current.value,
+            number: number.current.value,
             name: user.displayName,
             email: user.email,
             timestamp: firebase.firestore.FieldValue.serverTimestamp()
@@ -65,6 +69,7 @@ const InputBox = () => {
         title.current.value = "";
         price.current.value = "";
         description.current.value = "";
+        number.current.value = "";
         handleClose();
 
     }
@@ -139,6 +144,16 @@ const InputBox = () => {
                             fullWidth
                             variant="standard"
                         />
+                        <TextField
+                            inputRef={number}
+                            autoFocus
+                            margin="dense"
+                            id="name"
+                            label="Contact Number"
+                            type="number"
+                            fullWidth
+                            variant="standard"
+                        />
                     </DialogContent>
 
                     <DialogActions>
@@ -161,11 +176,6 @@ const InputBox = () => {
                     </DialogActions>
                 </Dialog>
             </div>
-            {/* <div className="inputBox__photo">
-                <CameraAlt />
-                <p>Photo/Video</p>
-                <input ref={filePickerRef} onChange={addImageToPost} type="file" hidden />
-            </div> */}
         </div>
     )
 }

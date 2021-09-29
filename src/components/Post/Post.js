@@ -4,7 +4,7 @@ import { useHistory } from 'react-router';
 import "./Post.css"
 import { selectPost } from "../../features/postSlice";
 
-const Post = ({ name, title, price, description, email, timestamp, postImage }) => {
+const Post = ({ name, title, price, description, number, email, timestamp, postImage }) => {
     const user = useSelector(selectUser);
     const dispatch = useDispatch();
     const history = useHistory();
@@ -15,6 +15,7 @@ const Post = ({ name, title, price, description, email, timestamp, postImage }) 
             title,
             price,
             description,
+            number,
             email,
             timestamp,
             postImage

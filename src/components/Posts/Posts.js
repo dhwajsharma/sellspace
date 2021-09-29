@@ -35,6 +35,7 @@ const Posts = () => {
                             title={post.data().title}
                             price={post.data().price}
                             description={post.data().description}
+                            number={post.data().number}
                             email={post.data().email}
                             timestamp={post.data().timestamp}
                             postImage={post.data().postImage}
@@ -47,6 +48,7 @@ const Posts = () => {
                             title={post.data().title}
                             price={post.data().price}
                             description={post.data().description}
+                            number={post.data().number}
                             email={post.email}
                             timestamp={post.timestamp}
                             postImage={post.postImage}

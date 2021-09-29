@@ -20,9 +20,9 @@ const OpenPost = () => {
                 </div>
                 <div className="openpost__message">
                     <p>{selectedPost?.title}</p>
-                    <p>{selectedPost?.price}</p>
+                    <p>{"₹ "}{selectedPost?.price}</p>
                     <p>{selectedPost?.description}</p>
-
+                    <p>{selectedPost?.number}</p>
                 </div>
             </div>
         </div>
