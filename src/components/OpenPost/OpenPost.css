@@ -22,10 +22,15 @@
 }
 
 .openpost__subHeading {
-  color: gray;
+  color: #96939b;
 }
 
 .openpost__message {
   margin-top: 20px;
   font-size: 20px;
+  color: #96939b;
+}
+
+.openpost__message h2 {
+  color: white !important;
 }
