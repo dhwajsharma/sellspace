@@ -12,6 +12,7 @@ import { auth, db } from './firebase';
 import Home from './components/Home/Home';
 import OpenPost from './components/OpenPost/OpenPost';
 import Team from './components/Team/Team';
+import Footer from './components/Footer/Footer';
 
 function App() {
   const user = useSelector(selectUser);
@@ -49,6 +50,7 @@ function App() {
         <div className="app">
           <Header />
           <Home posts={posts} />
+          <Footer />
         </div>
       ) : (
         <div className="app">
@@ -66,6 +68,7 @@ function App() {
               </Route>
             </Switch>
           </div>
+          <Footer />
         </div>
       )}
     </Router>

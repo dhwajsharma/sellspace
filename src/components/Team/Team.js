@@ -15,12 +15,7 @@ const Team = () => {
                     <h2>Front-End Developer</h2>
                 </div>
                 <div className="team__links">
-                    <Button variant="contained" color="primary" onClick={window.open("https:linkedin.com/in/dhwajsharma")}>
-                        LinkedIn
-                    </Button>
-                    <Button variant="contained" color="primary" onClick={window.open("https:github.com/dhwajsharma")}>
-                        GitHub
-                    </Button>
+
                 </div>
             </div>
             <div className="team__container">
@@ -34,12 +29,7 @@ const Team = () => {
                     <h2>UI/UX Designer</h2>
                 </div>
                 <div className="team__links">
-                    <Button variant="contained" color="primary" onClick={window.open("https://www.linkedin.com/in/tanishq-maheshwari-5605b71ab/")}>
-                        LinkedIn
-                    </Button>
-                    <Button variant="contained" color="primary" onClick={window.open("https://github.com/tanishq-m")}>
-                        GitHub
-                    </Button>
+
                 </div>
             </div>
         </div>
