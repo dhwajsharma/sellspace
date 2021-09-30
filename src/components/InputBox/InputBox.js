@@ -122,7 +122,7 @@ const InputBox = () => {
                             label="Title"
                             type="text"
                             fullWidth
-                            variant="standard"
+                            variant="outlined"
                         />
                         <TextField
                             inputRef={price}
@@ -132,7 +132,7 @@ const InputBox = () => {
                             label="Price (₹)"
                             type="number"
                             fullWidth
-                            variant="standard"
+                            variant="outlined"
                         />
                         <TextField
                             inputRef={description}
@@ -140,9 +140,11 @@ const InputBox = () => {
                             margin="dense"
                             id="name"
                             label="Description"
+                            multiline
+                            rows={4}
                             type="text"
                             fullWidth
-                            variant="standard"
+                            variant="outlined"
                         />
                         <TextField
                             inputRef={number}
@@ -152,7 +154,7 @@ const InputBox = () => {
                             label="Contact Number"
                             type="number"
                             fullWidth
-                            variant="standard"
+                            variant="outlined"
                         />
                     </DialogContent>
 
