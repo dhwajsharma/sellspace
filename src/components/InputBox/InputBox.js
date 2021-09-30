@@ -90,25 +90,17 @@ const InputBox = () => {
     return (
         <div className="inputBox">
             <div className="inputBox__searchBar">
-                {/* {
-                    !user ? (
-                        <div className="inputBox__inputContainer">
-                            <input ref={inputRef} type="text" placeholder="" disabled />
-                            <Button variant="contained" color="primary" onClick={sendPost} disabled >Submit</Button>
 
-                        </div>
+                {!user ? (
+                    <Button variant="contained" onClick={handleClickOpen} disabled>
+                        Add Post
+                    </Button>
+                ) : (
+                    <Button variant="contained" onClick={handleClickOpen} >
+                        Add Post
+                    </Button>
+                )}
 
-                    ) : (
-                        <div className="inputBox__inputContainer">
-                            <input ref={inputRef} type="text" placeholder="Post..." />
-                            <Button variant="contained" color="primary" onClick={sendPost} >Submit</Button>
-
-                        </div>
-                    )
-                } */}
-                <Button variant="contained" onClick={handleClickOpen}>
-                    Add Post
-                </Button>
                 <Dialog className="inputBox__dialog" open={open} onClose={handleClose}>
 
                     <DialogTitle>Enter Details</DialogTitle>
