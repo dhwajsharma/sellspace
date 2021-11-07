@@ -70,3 +70,7 @@
 .inputBox__dialog {
   background-color: black !important;
 }
+
+.inputBox__searchBar__removeImage {
+  margin: 0 auto;
+}
