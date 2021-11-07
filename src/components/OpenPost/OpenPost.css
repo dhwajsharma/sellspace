@@ -37,6 +37,11 @@
     align-items: center;
     height: 100%;
   }
+
+  .openpost__left img {
+    width: 300px;
+    object-fit: cover;
+  }
   .openpost__right {
     margin-top: 10px;
     margin-bottom: 20px;
