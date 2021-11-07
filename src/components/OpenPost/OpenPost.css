@@ -9,7 +9,10 @@
 }
 
 .openpost__left {
+  display: flex;
   flex: 1;
+  justify-content: center;
+  align-items: center;
 }
 
 .openpost__right {
@@ -18,8 +21,8 @@
 
 .openpost__left img {
   object-fit: contain;
-  width: 400px;
-  height: 400px;
+  width: 500px;
+  height: 500px;
   border-radius: 10px;
   box-shadow: 3px 3px 20px rgba(138, 135, 135, 0.5);
 }
@@ -38,7 +41,7 @@
   color: white !important;
 }
 
-@media only screen and (min-width: 360px) and (max-width: 810px) {
+@media only screen and (min-width: 360px) and (max-width: 1237px) {
   .openpost {
     display: flex;
     flex-direction: column;
