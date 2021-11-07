@@ -5,6 +5,15 @@
   background-color: #262a2b;
   color: rgb(220, 223, 30);
   padding: 50px;
+  margin-bottom: 20px;
+}
+
+.openpost__left {
+  flex: 1;
+}
+
+.openpost__right {
+  flex: 1;
 }
 
 .openpost__left img {
