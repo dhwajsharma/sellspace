@@ -4,6 +4,7 @@
   background-color: #262a2b;
   color: white;
   height: 100%;
+  margin: 100px auto;
 }
 
 .team__container {
@@ -15,6 +16,7 @@
   padding: 20px;
   border-radius: 10px;
   background-color: #1d2020;
+  text-align: center;
 }
 
 .team__image img {
@@ -36,6 +38,12 @@
   font-weight: bold;
   margin-bottom: 10px;
   color: gray;
+}
+
+.team__links a {
+  color: white;
+  text-decoration: none;
+  margin-right: 10px;
 }
 
 @media only screen and (min-width: 360px) and (max-width: 810px) {
