@@ -9,7 +9,6 @@
   align-items: center;
   color: white;
   text-align: center;
-
   margin: 10px;
   padding: 10px;
   z-index: 30;
@@ -58,7 +57,7 @@
 .post__image img {
   width: 200px;
   height: 200px;
-  object-fit: contain;
+  object-fit: cover;
   border-radius: 10px;
   margin-top: 10px;
 }

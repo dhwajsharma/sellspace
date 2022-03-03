@@ -3,7 +3,7 @@
   justify-content: center;
   background-color: #262a2b;
   color: white;
-  height: 100%;
+  height: 100vh;
   margin: 100px auto;
 }
 
@@ -12,8 +12,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 10px;
-  padding: 20px;
+  margin: 100px;
+  margin-top: -20px;
   border-radius: 10px;
   background-color: #1d2020;
   text-align: center;

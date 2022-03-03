@@ -1,18 +1,18 @@
-import "./Footer.css"
+import "./Footer.css";
 
 const Footer = () => {
-    return (
-        <div className="footer">
-            <a
-                target="_blank"
-                className="footer__link"
-                href="https://github.com/dhwajsharma/Marketplace-redux"
-                rel="noreferrer"
-            >
-                © 2021 Marketplace
-            </a>
-        </div>
-    )
-}
+  return (
+    <div className="footer">
+      <a
+        target="_blank"
+        className="footer__link"
+        href="https://github.com/dhwajsharma/Marketplace-redux"
+        rel="noreferrer"
+      >
+        © 2022 Marketplace
+      </a>
+    </div>
+  );
+};
 
-export default Footer
+export default Footer;
