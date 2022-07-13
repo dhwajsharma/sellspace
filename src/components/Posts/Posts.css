@@ -1,3 +1,22 @@
+.posts_parent {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.posts_parent>input {
+  background-color: #1D2020;
+  color: white;
+  margin: auto;
+  border: none;
+  text-align: center;
+  min-width: 20vw;
+  border-radius: 10px;
+  min-height: 5vh;
+  outline: none;
+  margin-bottom: 10px;
+}
+
 .posts {
   display: grid;
   gap: 40px;

@@ -53,7 +53,7 @@ const Header = () => {
           src="https://www.pngmart.com/files/5/Time-PNG-Transparent-Image.png"
           alt=""
         />
-        <h2>TICKTOCK MARKETPLACE</h2>
+        <h2>SellSpace</h2>
       </div>
 
       <div className="header__right">

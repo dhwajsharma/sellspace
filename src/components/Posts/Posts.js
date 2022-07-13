@@ -10,6 +10,7 @@ const Posts = () => {
     db.collection("posts").orderBy("timestamp", "desc")
   );
   const [posts, setPosts] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
     db.collection("posts")
@@ -26,34 +27,54 @@ const Posts = () => {
   }, []);
 
   return (
-    <div className="posts">
-      {realtimePosts
-        ? realtimePosts?.docs.map((post) => (
-            <Post
-              key={post.id}
-              name={post.data().name}
-              title={post.data().title}
-              price={post.data().price}
-              description={post.data().description}
-              number={post.data().number}
-              email={post.data().email}
-              timestamp={post.data().timestamp}
-              postImage={post.data().postImage}
-            />
-          ))
-        : posts.map((post) => (
-            <Post
-              key={post.id}
-              name={post.name}
-              title={post.data().title}
-              price={post.data().price}
-              description={post.data().description}
-              number={post.data().number}
-              email={post.email}
-              timestamp={post.timestamp}
-              postImage={post.postImage}
-            />
-          ))}
+    <div className="posts_parent">
+      <input
+        type="text"
+        placeholder="Search products..."
+        onChange={(e) => setSearchTerm(e.target.value)}
+      />
+      <div className="posts">
+        {realtimePosts
+          ? realtimePosts?.docs
+              .filter((val) => {
+                if (searchTerm === "") {
+                  return val;
+                } else if (
+                  val
+                    ?.data()
+                    ?.title?.toLowerCase()
+                    ?.includes(searchTerm?.toLowerCase())
+                ) {
+                  return val;
+                }
+              })
+              .map((post) => (
+                <Post
+                  key={post.id}
+                  name={post.data().name}
+                  title={post.data().title}
+                  price={post.data().price}
+                  description={post.data().description}
+                  number={post.data().number}
+                  email={post.data().email}
+                  timestamp={post.data().timestamp}
+                  postImage={post.data().postImage}
+                />
+              ))
+          : posts.map((post) => (
+              <Post
+                key={post.id}
+                name={post.name}
+                title={post.data().title}
+                price={post.data().price}
+                description={post.data().description}
+                number={post.data().number}
+                email={post.email}
+                timestamp={post.timestamp}
+                postImage={post.postImage}
+              />
+            ))}
+      </div>
     </div>
   );
 };
