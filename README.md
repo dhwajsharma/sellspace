@@ -1,1 +1,1 @@
-Marketplace for watches
+Marketplace for selling used items.
